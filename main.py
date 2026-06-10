@@ -3,6 +3,7 @@ from langchain_ollama import ChatOllama
 from tools.calculator import calculator
 from tools.weather import get_weather
 from tools.rag_tool import search_knowledge
+from tools.current_time import current_time
 
 from memory.history import chat_history
 
@@ -14,7 +15,8 @@ llm = ChatOllama(
 tools = [
     calculator,
     get_weather,
-    search_knowledge
+    search_knowledge,
+    current_time
 ]
 
 llm_with_tools = llm.bind_tools(
@@ -48,7 +50,8 @@ while True:
             selected_tool = {
                 "calculator": calculator,
                 "get_weather": get_weather,
-                "search_knowledge": search_knowledge
+                "search_knowledge": search_knowledge,
+                "current_time": current_time
             }[tool_name]
 
             result = selected_tool.invoke(
