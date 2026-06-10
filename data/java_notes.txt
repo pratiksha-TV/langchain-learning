@@ -1,0 +1,7 @@
+Spring Boot is a framework used to build Java applications.
+
+Kafka is a distributed event streaming platform.
+
+Redis is an in-memory data store.
+
+Dependency Injection is a design pattern used heavily in Spring.
